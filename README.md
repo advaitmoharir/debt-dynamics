@@ -4,4 +4,8 @@ This repository consists of the code and data for the paper [Fiscal rules and de
 
 ## Data
 
-The data required to produce all the figures is stored as seperate `csv` files, named after each Figure in the folder `Data`.
+The data required to produce all the figures is stored as seperate `csv` files, named after each Figure in the folder `Data`. All the csv files can be accessed in the excel sheet `Replication.xlsx`.
+
+## Code
+
+
