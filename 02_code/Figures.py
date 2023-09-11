@@ -8,6 +8,13 @@ import pandas as pd
 import plotly.io as pio
 import plotly.express as px
 import plotly.graph_objects as go
+
+# Get here function
+
+from pyprojroot.here import here
+
+here()
+
 pio.renderers.default='svg'
 px.defaults.height=700
 px.defaults.width=500
