@@ -35,7 +35,7 @@ Once these are installed, execute the following steps
 
 ## Software
 
-Python 3.11 (via VS code) and R Studio were used to run the code scripts. Data files arestored in Microsoft Excel 16.
+Python 3.11 (via VS code) and R Studio were used to run the code scripts. Data files are stored in Microsoft Excel 16.
 
 
 
