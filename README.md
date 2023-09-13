@@ -17,7 +17,7 @@ The folder `2_code` consists of the following scripts
 - `01_figs_trends.py`: Python file producing Figures 1-7, 9 and C1 (a)-C1(j).
 - `02_figs_simulations.R`:  R file producing Figures 10-11 and A1-A10.
 
-Figures 8 and 12 were produced by uploading the respective csvs on Google Sheets/
+Figures 8 and 12 were produced by uploading the respective csvs on Google Sheets.
 
 ## Replication 
 
