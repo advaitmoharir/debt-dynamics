@@ -6,16 +6,16 @@ This repository consists of the code and data for the paper [Fiscal rules and de
 
 The repository consists of the following folders:
 
-- `1_data`: Clean csvs, named by figure number
-- `2_code`: Code required to output tables
-- `3_figures`: Final figures used in paper
+- `1_data`:  Clean csvs, named by figure number
+- `2_code`:  Code required to output tables
+- `3_figures`:  Final figures used in paper
 
 ## Code
 
 The folder `2_code` consists of the following scripts
 
 - `01_figs_trends.py`: Python file producing Figures 1-7, 9 and C1 (a)-C1(j).
-- `02_figs_simulations.R`" R file producing Figures 10-11 and A1-A10.
+- `02_figs_simulations.R`:  R file producing Figures 10-11 and A1-A10.
 
 Figures 8 and 12 were produced by uploading the respective csvs on Google Sheets/
 
@@ -33,20 +33,13 @@ Once these are installed, execute the following steps
 
 2. Open `02_figs_simulations.R`. Depending on the state/scenario, choose the initial and target debt levels, as well as the time to hit target. Specify the range for interest and growth rates, whose lower and upper limits is one percent below/above the 10 year average. The average can be computed from the individual csvs for each state. Once, parameters are set, run the file, and save plot generated in the window. 
 
+## Software
+
+Python 3.11 (via VS code) and R Studio were used to run the code scripts. Data files arestored in Microsoft Excel 16.
 
 
 
 
 
-
-
-
-
-
-## Data
-
-The data required to produce all the figures is stored as seperate `csv` files, named after each Figure in the folder `Data`. All the csv files can be accessed in the excel sheet `Replication.xlsx`.
-
-## Code
 
 
