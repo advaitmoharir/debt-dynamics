@@ -4,19 +4,31 @@ Created on Sun Jul 26 22:03:27 2020
 
 @author: Advait Moharir
 """
+
+# Load packages
+
 import pandas as pd
 import numpy as np
 import plotly.io as pio
 pio.renderers.default = "vscode"
 import plotly.express as px
 import plotly.graph_objects as go
-# Get here function
+
+# Set root relative to project
 
 from pyprojroot.here import here
-
 here()
+
+# Set figure defaults
+
 px.defaults.height=500
 px.defaults.width=750
+
+###########################################################
+# Main Text Figures
+##########################################################
+
+
 #figure-1
 data=pd.read_csv('01_data\Fig1.csv')
 df=pd.DataFrame(data)
@@ -451,18 +463,17 @@ df5=pd.DataFrame(data)
 fig = px.line(df5, x='Year', y=['Debt/GSDP','Interest Rate', 'Real Growth'
                                 , 'Inflation', 'Primary Deficit'], 
               labels={'value':'', 'variable':'', 'Year':''}, 
-              line_shape='spline', template='plotly_white', 
-              width=800, height=400, title= "Bihar")
-fig.update_yaxes(tick0=-5, dtick=15)
+              line_shape='spline', template='plotly_white', title= "Bihar")
+#fig.update_yaxes(tick0=-5, dtick=15)
 fig.update_xaxes(tick0=1980, dtick=2)
 fig.add_shape(
         # Line Vertical
         dict(
             type="line",
             x0=1991,
-            y0=-40,
+            y0=-0.40,
             x1=1991,
-            y1=80,
+            y1=0.80,
             line=dict(
                 color="Grey",
                 width=2
@@ -473,9 +484,9 @@ fig.add_shape(
         dict(
             type="line",
             x0=1996,
-            y0=-40,
+            y0=-0.40,
             x1=1996,
-            y1=80,
+            y1=0.80,
             line=dict(
                 color="Grey",
                 width=2
@@ -486,9 +497,9 @@ fig.add_shape(
         dict(
             type="line",
             x0=2004,
-            y0=-40,
+            y0=-0.40,
             x1=2004,
-            y1=80,
+            y1=0.80,
             line=dict(
                 color="Grey",
                 width=2
@@ -499,9 +510,9 @@ fig.add_shape(
         dict(
             type="line",
             x0=2013,
-            y0=-40,
+            y0=-0.40,
             x1=2013,
-            y1=80,
+            y1=0.80,
             line=dict(
                 color="Grey",
                 width=2
@@ -512,7 +523,7 @@ fig.update_layout(legend=dict(
     yanchor="bottom",
     y=1.02,
     xanchor="right",
-    x=1
+    x=0.5
 ), yaxis =dict( tickformat= '.0%'))
 
 fig.write_image("03_figures/figc1_b.jpeg",format="jpg", engine="kaleido")
@@ -524,18 +535,17 @@ data=pd.read_csv('01_data\Figure C1_c.csv')
 df19=pd.DataFrame(data)
 fig = px.line(df19, x='Year',  y=['Debt/GSDP','Interest Rate', 'Real Growth', 'Inflation', 'Primary Deficit'], 
               labels={'value':'', 'variable':'', 'Year':''}, 
-              line_shape='spline', template='plotly_white', 
-              width=800, height=400, title= "Gujarat")
-fig.update_yaxes(tick0=-10, dtick=10)
+              line_shape='spline', template='plotly_white', title= "Gujarat")
+#fig.update_yaxes(tick0=-10, dtick=10)
 fig.update_xaxes(tick0=1980, dtick=2)
 fig.add_shape(
         # Line Vertical
         dict(
             type="line",
             x0=1991,
-            y0=-10,
+            y0=-0.10,
             x1=1991,
-            y1=45,
+            y1=0.45,
             line=dict(
                 color="Grey",
                 width=2
@@ -546,9 +556,9 @@ fig.add_shape(
         dict(
             type="line",
             x0=1996,
-            y0=-10,
+            y0=-0.10,
             x1=1996,
-            y1=45,
+            y1=0.45,
             line=dict(
                 color="Grey",
                 width=2
@@ -559,9 +569,9 @@ fig.add_shape(
         dict(
             type="line",
             x0=2004,
-            y0=-10,
+            y0=-0.10,
             x1=2004,
-            y1=45,
+            y1=0.45,
             line=dict(
                 color="Grey",
                 width=2
@@ -572,9 +582,9 @@ fig.add_shape(
         dict(
             type="line",
             x0=2013,
-            y0=-10,
+            y0=-0.10,
             x1=2013,
-            y1=45,
+            y1=0.45,
             line=dict(
                 color="Grey",
                 width=2
@@ -585,9 +595,10 @@ fig.update_layout(legend=dict(
     yanchor="bottom",
     y=1.02,
     xanchor="right",
-    x=1
+    x=0.5
 ), yaxis =dict( tickformat= '.0%'))
-fig.show()
+
+fig.write_image("03_figures/figc1_c.jpeg",format="jpg", engine="kaleido")
 
 #KT
 
@@ -595,18 +606,17 @@ data=pd.read_csv('01_data\Figure C1_d.csv')
 df20=pd.DataFrame(data)
 fig = px.line(df20, x='Year',  y=['Debt/GSDP','Interest Rate', 'Real Growth', 'Inflation', 'Primary Deficit'], 
               labels={'value':'', 'variable':'', 'Year':''}, 
-              line_shape='spline', template='plotly_white', 
-              width=800, height=400, title= "Karnataka")
-fig.update_yaxes(tick0=-5, dtick=10)
+              line_shape='spline', template='plotly_white', title= "Karnataka")
+#fig.update_yaxes(tick0=-5, dtick=10)
 fig.update_xaxes(tick0=1980, dtick=2)
 fig.add_shape(
         # Line Vertical
         dict(
             type="line",
             x0=1991,
-            y0=-10,
+            y0=-0.10,
             x1=1991,
-            y1=45,
+            y1=0.45,
             line=dict(
                 color="Grey",
                 width=2
@@ -617,9 +627,9 @@ fig.add_shape(
         dict(
             type="line",
             x0=1996,
-            y0=-10,
+            y0=-0.10,
             x1=1996,
-            y1=45,
+            y1=0.45,
             line=dict(
                 color="Grey",
                 width=2
@@ -630,9 +640,9 @@ fig.add_shape(
         dict(
             type="line",
             x0=2004,
-            y0=-10,
+            y0=-0.10,
             x1=2004,
-            y1=45,
+            y1=0.45,
             line=dict(
                 color="Grey",
                 width=2
@@ -643,9 +653,9 @@ fig.add_shape(
         dict(
             type="line",
             x0=2013,
-            y0=-10,
+            y0=-0.10,
             x1=2013,
-            y1=45,
+            y1=0.45,
             line=dict(
                 color="Grey",
                 width=2
@@ -656,9 +666,10 @@ fig.update_layout(legend=dict(
     yanchor="bottom",
     y=1.02,
     xanchor="right",
-    x=1
+    x=0.5
 ), yaxis =dict( tickformat= '.0%'))
-fig.show()
+
+fig.write_image("03_figures/figc1_d.jpeg",format="jpg", engine="kaleido")
 
 #MP
 
@@ -666,18 +677,17 @@ data=pd.read_csv('01_data\Figure C1_e.csv')
 df20=pd.DataFrame(data)
 fig = px.line(df20, x='Year',  y=['Debt/GSDP','Interest Rate', 'Real Growth', 'Inflation', 'Primary Deficit'], 
               labels={'value':'', 'variable':'', 'Year':''}, 
-              line_shape='spline', template='plotly_white', 
-              width=800, height=400, title= "Madhya Pradesh")
-fig.update_yaxes(tick0=-5, dtick=10)
+              line_shape='spline', template='plotly_white', title= "Madhya Pradesh")
+#fig.update_yaxes(tick0=-5, dtick=10)
 fig.update_xaxes(tick0=1980, dtick=2)
 fig.add_shape(
         # Line Vertical
         dict(
             type="line",
             x0=1991,
-            y0=-10,
+            y0=-0.10,
             x1=1991,
-            y1=45,
+            y1=0.45,
             line=dict(
                 color="Grey",
                 width=2
@@ -688,9 +698,9 @@ fig.add_shape(
         dict(
             type="line",
             x0=1996,
-            y0=-10,
+            y0=-0.10,
             x1=1996,
-            y1=45,
+            y1=0.45,
             line=dict(
                 color="Grey",
                 width=2
@@ -701,9 +711,9 @@ fig.add_shape(
         dict(
             type="line",
             x0=2004,
-            y0=-10,
+            y0=-0.10,
             x1=2004,
-            y1=45,
+            y1=0.45,
             line=dict(
                 color="Grey",
                 width=2
@@ -714,9 +724,9 @@ fig.add_shape(
         dict(
             type="line",
             x0=2013,
-            y0=-10,
+            y0=-0.10,
             x1=2013,
-            y1=45,
+            y1=0.45,
             line=dict(
                 color="Grey",
                 width=2
@@ -727,9 +737,10 @@ fig.update_layout(legend=dict(
     yanchor="bottom",
     y=1.02,
     xanchor="right",
-    x=1
+    x=0.5
 ), yaxis =dict( tickformat= '.0%'))
-fig.show()
+
+fig.write_image("03_figures/figc1_e.jpeg",format="jpg", engine="kaleido")
 
 #MH
 
@@ -737,18 +748,17 @@ data=pd.read_csv('01_data\Figure C1_f.csv')
 df20=pd.DataFrame(data)
 fig = px.line(df20, x='Year',  y=['Debt/GSDP','Interest Rate', 'Real Growth', 'Inflation', 'Primary Deficit'], 
               labels={'value':'', 'variable':'', 'Year':''}, 
-              line_shape='spline', template='plotly_white', 
-              width=800, height=400, title= "Maharashtra")
-fig.update_yaxes(tick0=-5, dtick=10)
+              line_shape='spline', template='plotly_white', title= "Maharashtra")
+#fig.update_yaxes(tick0=-5, dtick=10)
 fig.update_xaxes(tick0=1980, dtick=2)
 fig.add_shape(
         # Line Vertical
         dict(
             type="line",
             x0=1991,
-            y0=-5,
+            y0=-0.05,
             x1=1991,
-            y1=35,
+            y1=0.35,
             line=dict(
                 color="Grey",
                 width=2
@@ -759,9 +769,9 @@ fig.add_shape(
         dict(
             type="line",
             x0=1996,
-            y0=-5,
+            y0=-0.05,
             x1=1996,
-            y1=35,
+            y1=0.35,
             line=dict(
                 color="Grey",
                 width=2
@@ -772,9 +782,9 @@ fig.add_shape(
         dict(
             type="line",
             x0=2004,
-            y0=-5,
+            y0=-0.05,
             x1=2004,
-            y1=35,
+            y1=0.35,
             line=dict(
                 color="Grey",
                 width=2
@@ -785,9 +795,9 @@ fig.add_shape(
         dict(
             type="line",
             x0=2013,
-            y0=-5,
+            y0=-0.05,
             x1=2013,
-            y1=35,
+            y1=0.35,
             line=dict(
                 color="Grey",
                 width=2
@@ -798,9 +808,10 @@ fig.update_layout(legend=dict(
     yanchor="bottom",
     y=1.02,
     xanchor="right",
-    x=1
+    x=0.5
 ), yaxis =dict( tickformat= '.0%'))
-fig.show()
+
+fig.write_image("03_figures/figc1_f.jpeg",format="jpg", engine="kaleido")
 
 #RJ
 
@@ -808,18 +819,17 @@ data=pd.read_csv('01_data\Figure C1_g.csv')
 df20=pd.DataFrame(data)
 fig = px.line(df20, x='Year',  y=['Debt/GSDP','Interest Rate', 'Real Growth', 'Inflation', 'Primary Deficit'], 
               labels={'value':'', 'variable':'', 'Year':''}, 
-              line_shape='spline', template='plotly_white', 
-              width=800, height=400, title= "Rajasthan")
-fig.update_yaxes(tick0=-10, dtick=10)
+              line_shape='spline', template='plotly_white', title= "Rajasthan")
+#fig.update_yaxes(tick0=-10, dtick=10)
 fig.update_xaxes(tick0=1980, dtick=2)
 fig.add_shape(
         # Line Vertical
         dict(
             type="line",
             x0=1991,
-            y0=-10,
+            y0=-0.10,
             x1=1991,
-            y1=60,
+            y1=0.60,
             line=dict(
                 color="Grey",
                 width=2
@@ -830,9 +840,9 @@ fig.add_shape(
         dict(
             type="line",
             x0=1996,
-            y0=-10,
+            y0=-0.10,
             x1=1996,
-            y1=60,
+            y1=0.60,
             line=dict(
                 color="Grey",
                 width=2
@@ -843,9 +853,9 @@ fig.add_shape(
         dict(
             type="line",
             x0=2004,
-            y0=-10,
+            y0=-0.10,
             x1=2004,
-            y1=60,
+            y1=0.60,
             line=dict(
                 color="Grey",
                 width=2
@@ -856,9 +866,9 @@ fig.add_shape(
         dict(
             type="line",
             x0=2013,
-            y0=-10,
+            y0=-0.10,
             x1=2013,
-            y1=60,
+            y1=0.60,
             line=dict(
                 color="Grey",
                 width=2
@@ -869,27 +879,27 @@ fig.update_layout(legend=dict(
     yanchor="bottom",
     y=1.02,
     xanchor="right",
-    x=1
+    x=0.5
 ), yaxis =dict( tickformat= '.0%'))
-fig.show()
+
+fig.write_image("03_figures/figc1_g.jpeg",format="jpg", engine="kaleido")
 
 #TN
 data=pd.read_csv('01_data\Figure C1_h.csv')
 df20=pd.DataFrame(data)
 fig = px.line(df20, x='Year',  y=['Debt/GSDP','Interest Rate', 'Real Growth', 'Inflation', 'Primary Deficit'], 
               labels={'value':'', 'variable':'', 'Year':''}, 
-              line_shape='spline', template='plotly_white', 
-              width=800, height=400, title= "Tamil Nadu")
-fig.update_yaxes(tick0=-10, dtick=10)
+              line_shape='spline', template='plotly_white', title= "Tamil Nadu")
+#fig.update_yaxes(tick0=-10, dtick=10)
 fig.update_xaxes(tick0=1980, dtick=2)
 fig.add_shape(
         # Line Vertical
         dict(
             type="line",
             x0=1991,
-            y0=-10,
+            y0=-0.10,
             x1=1991,
-            y1=35,
+            y1=0.35,
             line=dict(
                 color="Grey",
                 width=2
@@ -900,9 +910,9 @@ fig.add_shape(
         dict(
             type="line",
             x0=1996,
-            y0=-10,
+            y0=-0.10,
             x1=1996,
-            y1=35,
+            y1=0.35,
             line=dict(
                 color="Grey",
                 width=2
@@ -913,9 +923,9 @@ fig.add_shape(
         dict(
             type="line",
             x0=2004,
-            y0=-10,
+            y0=-0.010,
             x1=2004,
-            y1=35,
+            y1=.35,
             line=dict(
                 color="Grey",
                 width=2
@@ -926,9 +936,9 @@ fig.add_shape(
         dict(
             type="line",
             x0=2013,
-            y0=-10,
+            y0=-.10,
             x1=2013,
-            y1=35,
+            y1=.35,
             line=dict(
                 color="Grey",
                 width=2
@@ -939,9 +949,10 @@ fig.update_layout(legend=dict(
     yanchor="bottom",
     y=1.02,
     xanchor="right",
-    x=1
+    x=0.5
 ), yaxis =dict( tickformat= '.0%'))
-fig.show()
+
+fig.write_image("03_figures/figc1_h.jpeg",format="jpg", engine="kaleido")
 
 #UP
 
@@ -949,18 +960,17 @@ data=pd.read_csv('01_data\Figure C1_i.csv')
 df20=pd.DataFrame(data)
 fig = px.line(df20, x='Year',  y=['Debt/GSDP','Interest Rate', 'Real Growth', 'Inflation', 'Primary Deficit'], 
               labels={'value':'', 'variable':'', 'Year':''}, 
-              line_shape='spline', template='plotly_white', 
-              width=800, height=400, title= "Uttar Pradesh")
-fig.update_yaxes(tick0=-10, dtick=10)
+              line_shape='spline', template='plotly_white', title= "Uttar Pradesh")
+#fig.update_yaxes(tick0=-10, dtick=10)
 fig.update_xaxes(tick0=1980, dtick=2)
 fig.add_shape(
         # Line Vertical
         dict(
             type="line",
             x0=1991,
-            y0=-10,
+            y0=-.10,
             x1=1991,
-            y1=60,
+            y1=.60,
             line=dict(
                 color="Grey",
                 width=2
@@ -971,9 +981,9 @@ fig.add_shape(
         dict(
             type="line",
             x0=1996,
-            y0=-10,
+            y0=-.10,
             x1=1996,
-            y1=60,
+            y1=.60,
             line=dict(
                 color="Grey",
                 width=2
@@ -984,9 +994,9 @@ fig.add_shape(
         dict(
             type="line",
             x0=2004,
-            y0=-10,
+            y0=-0.10,
             x1=2004,
-            y1=60,
+            y1=0.60,
             line=dict(
                 color="Grey",
                 width=2
@@ -997,9 +1007,9 @@ fig.add_shape(
         dict(
             type="line",
             x0=2013,
-            y0=-10,
+            y0=-.10,
             x1=2013,
-            y1=60,
+            y1=.60,
             line=dict(
                 color="Grey",
                 width=2
@@ -1010,9 +1020,10 @@ fig.update_layout(legend=dict(
     yanchor="bottom",
     y=1.02,
     xanchor="right",
-    x=1
+    x=0.5
 ), yaxis =dict( tickformat= '.0%'))
-fig.show()
+
+fig.write_image("03_figures/figc1_i.jpeg",format="jpg", engine="kaleido")
 
 #WB
 
@@ -1020,18 +1031,17 @@ data=pd.read_csv('01_data\Figure C1_j.csv')
 df20=pd.DataFrame(data)
 fig = px.line(df20, x='Year',  y=['Debt/GSDP','Interest Rate', 'Real Growth', 'Inflation', 'Primary Deficit'], 
               labels={'value':'', 'variable':'', 'Year':''}, 
-              line_shape='spline', template='plotly_white', 
-              width=800, height=400, title= "West Bengal")
-fig.update_yaxes(tick0=-10, dtick=10)
+              line_shape='spline', template='plotly_white', title= "West Bengal")
+#fig.update_yaxes(tick0=-10, dtick=10)
 fig.update_xaxes(tick0=1980, dtick=2)
 fig.add_shape(
         # Line Vertical
         dict(
             type="line",
             x0=1991,
-            y0=-10,
+            y0=-.10,
             x1=1991,
-            y1=60,
+            y1=.60,
             line=dict(
                 color="Grey",
                 width=2
@@ -1042,9 +1052,9 @@ fig.add_shape(
         dict(
             type="line",
             x0=1996,
-            y0=-10,
+            y0=-.10,
             x1=1996,
-            y1=60,
+            y1=.60,
             line=dict(
                 color="Grey",
                 width=2
@@ -1055,9 +1065,9 @@ fig.add_shape(
         dict(
             type="line",
             x0=2004,
-            y0=-10,
+            y0=-.10,
             x1=2004,
-            y1=60,
+            y1=.60,
             line=dict(
                 color="Grey",
                 width=2
@@ -1068,9 +1078,9 @@ fig.add_shape(
         dict(
             type="line",
             x0=2013,
-            y0=-10,
+            y0=-.10,
             x1=2013,
-            y1=60,
+            y1=.60,
             line=dict(
                 color="Grey",
                 width=2
@@ -1081,9 +1091,10 @@ fig.update_layout(legend=dict(
     yanchor="bottom",
     y=1.02,
     xanchor="right",
-    x=1
+    x=0.5
 ), yaxis =dict( tickformat= '.0%'))
-fig.show()
+
+fig.write_image("03_figures/figc1_j.jpeg",format="jpg", engine="kaleido")
 
 
 
